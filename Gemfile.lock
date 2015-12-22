@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/jnicklas/capybara.git
+  revision: 52dab1b9e7b18547636ebdd0aabd5b24ac452f1d
+  specs:
+    capybara (2.6.0.dev)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -36,9 +47,11 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.6.0)
     hike (1.2.3)
+    hirb (0.7.3)
     i18n (0.7.0)
     jbuilder (2.3.2)
       activesupport (>= 3.0.0, < 5)
@@ -50,8 +63,11 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.99)
+    mini_portile2 (2.0.0)
     minitest (5.8.3)
     multi_json (1.11.2)
+    nokogiri (1.6.7.1)
+      mini_portile2 (~> 2.0.0.rc2)
     rack (1.5.5)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -72,6 +88,23 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    rspec-core (3.4.1)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-rails (3.4.0)
+      actionpack (>= 3.0, < 4.3)
+      activesupport (>= 3.0, < 4.3)
+      railties (>= 3.0, < 4.3)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -102,15 +135,20 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara!
   coffee-rails (~> 4.0.0)
+  hirb
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.1.8)
+  rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring

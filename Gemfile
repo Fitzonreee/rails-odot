@@ -32,6 +32,7 @@ end
 
 group :test do
   gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+  gem 'shoulda-matchers', '~> 2.8.0', require: false
 end
 
 gem 'hirb'

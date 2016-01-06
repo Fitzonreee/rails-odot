@@ -31,6 +31,8 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   # Probably not necessary
   config.include TodoListHelpers, type: :feature
+  config.include RailsDomIdHelper, type: :feature
+
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

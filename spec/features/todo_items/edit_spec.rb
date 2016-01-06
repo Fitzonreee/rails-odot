@@ -5,13 +5,6 @@ describe "Editing todo items" do
   let!(:todo_list) { TodoList.create(title: "Grocery List", description: "Groceries") }
   let!(:todo_item) { todo_list.todo_items.create(content: "Almond Milk") }
 
-  def visit_todo_list(list)
-    visit "/todo_lists"
-    within "#todo_list_#{list.id}" do
-      click_link "List Items"
-    end
-  end
-
   # ALL 3 of these are failing: Unable to find css "todo_item_1"
   # Video: Editing Todo items - 3min mark
 

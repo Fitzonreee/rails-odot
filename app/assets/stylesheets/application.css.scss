@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
  div.alert {
    border: 2px solid #ab0000;
    padding: 10px;

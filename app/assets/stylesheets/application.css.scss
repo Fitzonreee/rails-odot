@@ -17,6 +17,30 @@
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+/*************************
+		    GLOBAL
+*************************/
+
+* {
+  font-family: 'Quicksand', serif;
+  font-weight: 300;
+}
+
+
+/*************************
+		    HOME PAGE
+*************************/
+
+.nav {
+  // background-color: rgb(0, 88, 144);
+}
+
+/*************************
+		    Alerts
+*************************/
 
  div.alert {
    border: 2px solid #ab0000;

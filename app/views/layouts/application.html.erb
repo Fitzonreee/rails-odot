@@ -5,26 +5,32 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <div class="container">
-    <div class="nav">
-      <h1><%= link_to "Odot", root_path %></h1>
-      <ul>
-        <li><%= link_to "Todo Lists", todo_lists_path %></li>
-      </ul>
-      <br class="clear" />
-    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <div class="nav">
+          <br class="clear" />
+          <div class="panel panel-default">
+            <div class="panel-heading"><h1 style="text-align: center;"><i class="fa fa-list" style="margin-right: 10px;"></i><%= link_to "Odot", root_path %></h1></div>
+            <div class="panel-body"><p><%= link_to "Todo Lists", todo_lists_path %></p></div>
+          </div>
+        </div> <!-- end of nav -->
 
-    <% flash.each do |type, message| %>
-      <div class="alert flash <%= type %>">
-        <%= message %>
-      </div>
-    <% end %>
+        <% flash.each do |type, message| %>
+          <div class="alert flash <%= type %>">
+            <%= message %>
+          </div>
+        <% end %>
 
-    <%= yield %>
-  </div>
+        <%= yield %>
+
+      </div> <!-- end of col -->
+    </div> <!-- end of row -->
+  </div> <!-- end of container -->
 
 
 </body>

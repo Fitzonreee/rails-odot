@@ -31,8 +31,14 @@
 }
 
 a:hover {
-  color: green;
+  // color: rgb(0, 190, 209);
+  font-weight: 700;
+  color: black;
   text-decoration: none;
+}
+
+a {
+  color: black;
 }
 
 
@@ -48,11 +54,11 @@ a:hover {
 		    Alerts
 *************************/
 
- div.alert {
-   border: 2px solid #ab0000;
-   padding: 10px;
- }
+ // div.alert {
+ //   border: 2px solid #ab0000;
+ //   padding: 10px;
+ // }
 
- div.flash.success { border: 2px solid green; color: green; }
- div.flash.error { border: 2px solid red; color: red; }
- div.flash.notice { border: 2px solid blue; color: blue; }
+ // div.flash.success { border: 2px solid green; color: green; }
+ // div.flash.error { border: 2px solid red; color: red; }
+ // div.flash.notice { border: 2px solid blue; color: blue; }

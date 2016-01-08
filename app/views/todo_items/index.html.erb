@@ -1,6 +1,6 @@
 <h1><%= @todo_list.title %></h1>
 
-<table class="todo_items">
+<table class="todo_items table table-bordered table-stripped">
   <thead>
     <tr>
       <th>Completed?</th>
@@ -13,20 +13,19 @@
       <tr id="<%= dom_id(todo_item) %>">
         <td>
           <% if todo_item.completed? %>
-            <%= todo_item.completed_at %>
+            <%= todo_item.completed_at.strftime("%m/%d/%Y at %H:%M:%S") %>
           <% else %>
             <%= link_to "Mark Complete", complete_todo_list_todo_item_path(todo_item), method: :patch %>
           <% end %>
         </td>
         <td><%= todo_item.content %></td>
-        <td>
-
-          <%= link_to "Edit", edit_todo_list_todo_item_path(todo_item) %>
-          <%= link_to "Delete", todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?" } %>
+        <td style="text-align:center;">
+          <span class="btn btn-warning btn-xs"><%= link_to icon('pencil-square-o'), edit_todo_list_todo_item_path(todo_item) %></span>
+          <span class="btn btn-danger btn-xs"><%= link_to icon('trash'), todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?" } %></span>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<p><%= link_to "New Todo Item", new_todo_list_todo_item_path %></p>
+<p class="btn btn-default btn-xs"><%= link_to "New Todo Item", new_todo_list_todo_item_path %></p>

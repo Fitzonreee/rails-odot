@@ -11,21 +11,22 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-8 col-md-offset-2">
         <div class="nav">
           <br class="clear" />
           <div class="panel panel-default">
-            <div class="panel-heading"><h1 style="text-align: center;"><i class="fa fa-list" style="margin-right: 10px;"></i><%= link_to "Odot", root_path %></h1></div>
+            <div class="panel-heading"><h1 style="text-align: center;"><%= link_to "Odot", root_path %></h1></div>
             <div class="panel-body">
               <span class="btn btn-default btn-xs"><%= link_to "Todo Lists", todo_lists_path %></span>
-              <span class="btn btn-success btn-xs pull-right"><%= link_to 'New Todo list', new_todo_list_path %></span>
+              <span class="btn btn-default btn-xs pull-right"><%= link_to 'New Todo list', new_todo_list_path %></span>
             </div>
 
           </div>
         </div> <!-- end of nav -->
 
+        <!-- change these to Bootstrap Alerts -->
         <% flash.each do |type, message| %>
-          <div class="alert flash <%= type %>">
+          <div class="alert alert-<%= type %>">
             <%= message %>
           </div>
         <% end %>

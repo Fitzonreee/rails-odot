@@ -41,8 +41,13 @@ a {
   color: black;
 }
 
-.table > tfoot > tr > td {
-  vertical-align: center !important;
+table > thead > tr > th {
+  text-align: center !important;
+}
+
+// NOT working
+.table > tbody > tr > td {
+  vertical-align: middle !important;
 }
 
 

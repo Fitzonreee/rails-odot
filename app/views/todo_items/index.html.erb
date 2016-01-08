@@ -20,8 +20,8 @@
         </td>
         <td><%= todo_item.content %></td>
         <td style="text-align:center;">
-          <span class="btn btn-warning btn-xs"><%= link_to icon('pencil-square-o'), edit_todo_list_todo_item_path(todo_item) %></span>
-          <span class="btn btn-danger btn-xs"><%= link_to icon('trash'), todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?" } %></span>
+          <span class="btn btn-warning btn-sm"><%= link_to icon('pencil-square-o'), edit_todo_list_todo_item_path(todo_item) %></span>
+          <span class="btn btn-danger btn-sm"><%= link_to icon('trash'), todo_list_todo_item_path(todo_item), method: :delete, data: { confirm: "Are you sure?" } %></span>
         </td>
       </tr>
     <% end %>
